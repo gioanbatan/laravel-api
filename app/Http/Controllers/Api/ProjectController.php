@@ -14,7 +14,7 @@ class ProjectController extends Controller
         $projects = Project::with('type', 'technologies')->get();
         return response()->json([
             'success' => 'true',
-            'result' => $projects
+            'results' => $projects
         ]);
     }
 }
