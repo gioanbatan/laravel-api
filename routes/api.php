@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,5 @@ Route::get('/test', function () {
         'response' => 'CIAO'
     ]);
 });
+
+Route::get('projects', [ProjectController::class, 'index']);
